@@ -1,35 +1,43 @@
 * {
     box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  button, input[type="text"] {
-    padding: 5px;
-  }
-  
-  button:hover {
-    cursor: pointer;
-  }
-  
-  .container {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .error-message {
-      color: red;
-  }
-  
-  .hidden {
-    display: none;
-  }
+}
 
-  section{
-      display:flex;
-      flex-direction: column;
-      background:lightcyan;
-      padding: 20px 100px;
-  }
+body {
+font-family: 'Roboto', sans-serif;
+background-color: darkslategrey;
+color: lightgray;
+}
+  
+select{
+    font-size:1.3em;
+}
+
+.button{
+    padding: 5px;
+}
+  
+.button:hover {
+    color: rgb(75, 14, 14);
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+}
+
+.container {
+max-width: 600px;
+margin: 0 auto;
+}
+
+.error-message {
+    color: rgb(243, 107, 107);
+    font-weight: bold;
+    font-size: 1.5em;
+}
+  
+.hidden {
+    display: none;
+}
+
+section{
+    background-color: lightgray;
+    color: rgb(18, 26, 26);
+    padding: 20px 100px;
+}

@@ -6,10 +6,7 @@ const apiKey = 'dk3vuQY3nthQ9D3xHVBp6bqDdIdjeKx8YvU1Vfoz'
 const searchURL = 'https://developer.nps.gov/api/v1/parks';
 
 function displayResults(responseJson){
-
-    // console.log(`Array length: ${responseJson.data.length}`)
-    // console.log(`Array length: ${responseJson.data[0].fullName}`)
-    
+   
     //clear out for new HTML
     $('.error-message').empty();
     $('#results-list').empty();

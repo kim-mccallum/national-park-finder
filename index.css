@@ -3,9 +3,9 @@
 }
 
 body {
-font-family: 'Roboto', sans-serif;
-background-color: darkslategrey;
-color: lightgray;
+    font-family: 'Roboto', sans-serif;
+    background-color: darkslategrey;
+    color: lightgray;
 }
 
 form{
@@ -30,8 +30,6 @@ select{
     display:flex;
     flex-direction: column;
     align-items: center;
-    /* max-width: 600px;
-    margin: 0 auto; */
 }
 
 .error-message {
@@ -48,4 +46,6 @@ section{
     background-color: lightgray;
     color: rgb(18, 26, 26);
     padding: 20px 100px;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.5);
 }
+

@@ -14,7 +14,7 @@
         <section>
             <form id="js-form">
                 <p>Use this form to search for National Parks by state.</p>
-                <label for="search-states">Select a State</label>
+                <label for="search-states">Select one or more US states</label>
                 <br>
                 <select name="search-states" id="js-search-states" required multiple >
                     <option value="AL">Alabama</option>
@@ -72,7 +72,7 @@
                 <br>
                 <p>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</p>
 
-                <label for="max-results">Maximum results to return</label>
+                <label for="max-results">Maximum number of parks to return</label>
                 <input type="number" name="max-results" id="js-max-results" value="10">
                 <br>
                 <input class="button" type="submit" value="Search National Parks">
@@ -81,7 +81,7 @@
 
         <p id="js-error-message" class="error-message"></p>
         <section id="results" class="hidden">
-          <h2>Search results</h2>
+          <h2 class="state-results-header"></h2>
           <ul id="results-list">
           </ul>
         </section>

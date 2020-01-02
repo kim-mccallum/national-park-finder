@@ -5,11 +5,15 @@ const apiKey = 'dk3vuQY3nthQ9D3xHVBp6bqDdIdjeKx8YvU1Vfoz'
 
 const searchURL = 'https://developer.nps.gov/api/v1/parks';
 
-function displayResults(responseJson){
+function displayResults(query, responseJson){
    
     //clear out for new HTML
     $('.error-message').empty();
     $('#results-list').empty();
+    $('.state-results-header').empty();
+    //Render states searched
+    console.log(`Searching results for: ${query}`);
+    $('.state-results-header').append(`Search results for: ${query}`);
     //get data array
     const resultArr = responseJson.data;
     for (let i=0; i<resultArr.length; i++){
@@ -34,7 +38,7 @@ function formatQueryParams(params) {
 
 //define params, query, search and fetch!
 function getNationalParks(query, maxResults=10){
-    console.log("getNationalParks ran");
+    // console.log(`Searching for these states: ${query}`);
     const params = {
         api_key: apiKey,
         stateCode: query,
@@ -56,7 +60,7 @@ function getNationalParks(query, maxResults=10){
         .then(responseJson => {
             console.log(responseJson)
             console.log(responseJson.data.length)
-            displayResults(responseJson)
+            displayResults(query, responseJson)
         })
         .catch(err => {
             $('#js-error-message').text(`Something went wrong: ${err.message}`);
@@ -70,7 +74,7 @@ function watchForm(){
         event.preventDefault();
         const searchStates = $('#js-search-states').val();
         const maxResults = $('#js-max-results').val();
-        console.log(`Search for: ${searchStates}, return a max of ${maxResults}`)
+        // console.log(`Search for: ${searchStates}, return a max of ${maxResults}`)
         getNationalParks(searchStates, maxResults)
     })
 }
